@@ -147,6 +147,10 @@ impl<T: Copy> Clone for Volatile<T> {
     }
 }
 
+impl<T: Copy> Copy for Volatile<T> {
+    // Empty.
+}
+
 /// A volatile wrapper which only allows read operations.
 ///
 /// The size of this struct is the same as the contained type.
